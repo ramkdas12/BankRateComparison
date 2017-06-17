@@ -1,0 +1,107 @@
+a {
+  color: #00B7FF;
+}
+
+.page-footer {
+  padding-top: 9px;
+  margin: 20px 0 20px;
+  border-top: 1px solid #eee;
+}
+
+body {
+  font-size: 14px;
+  color: #444444;
+}
+
+header{border-bottom: 1px solid #aaaaaa;}
+
+
+.increment{
+	cursor: pointer;
+	color: #00B7FF;
+}
+
+/* margins Start*/
+
+.mB10{margin-bottom: 10px;}
+.mB20{margin-bottom: 20px;}
+.mL30{margin-left: 30px;}
+.mL15{margin-left: 15px;}
+.mL5per{margin-left: 5%;}
+
+/* margins Ends */
+
+/* widths Start */
+
+.w70per{width: 70%;}
+
+/* widths End */
+
+/* Floats table views Start */
+
+.float-left{float: left;}
+.float-right{float: right;}
+.clear{clear: both;}
+
+/* Floats table views End*/
+
+/* Dashboard option starts */
+.loanOption {
+    width: 75%;
+    height: 40px;
+    padding: 10px;
+    background-color: darkorange;
+    margin: 10px;
+    border: 1px solid yellow;
+    /* box-shadow: 2px 0px 3px yellow; */
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: width 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+
+.loanOption:hover {
+    width: 80%;
+    box-shadow: 5px 5px 3px red;
+}
+  /*Dashboard option text starts */
+  .loanOption:hover > .loanText {
+    color: aliceblue;
+    font-size: 16px;
+  }
+  .loanText {
+      color: black;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 14px;
+      /* transition: font-size 250ms ease-in-out; */
+  }
+  .error{
+    color: red;
+    text-align: center;
+  }
+
+  input.ng-invalid, input.ng-empty {
+    border: 1px solid red;
+    box-shadow: 0px 0px 5px red inset;
+  }
+
+  input.ng-pristine {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  /* Dashboard option text ends */
+
+/* Dashboard option ends */
+
+
+@media (max-width: 768px){
+  .control-label {
+      padding-top: 7px;
+      margin-bottom: 0;
+      text-align: right;
+      margin-right: 10px;
+  }
+  .modal-content{
+    padding: 10px;
+  }
+}

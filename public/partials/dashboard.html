@@ -1,0 +1,61 @@
+<section ng-controller="DashBoardController as $ctrl" class="modal-demo">
+
+<h2>Choose an option to compare</h2>
+
+<div class="loanOption" ng-click="$ctrl.open('personal')">
+  <span class="loanText">Personal Loan</span>
+</div>
+<div class="loanOption" ng-click="$ctrl.open('home')">
+  <span class="loanText">Home Loan</span>
+</div>
+<div class="loanOption" ng-click="$ctrl.open('twoWheeler')">
+  <span class="loanText">Two Wheeler Loan</span>
+</div>
+<div class="loanOption" ng-click="$ctrl.open('fourWheler')">
+  <span class="loanText">Four Wheeler Loan</span>
+</div>
+<div class="loanOption" ng-click="$ctrl.open('education')">
+  <span class="loanText">Education Loan</span>
+</div>
+
+<script type="text/ng-template" id="formDetails.html">
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Please fill the following details</h3>
+  </div>
+  <form class="form-horizontal" novalidate="true">
+    <div class="modal-body" id="modal-body">
+      <div class="form-group">
+        <div class="row">
+          <label class="col-lg-3 col-xs-2 col-sm-2 control-label">Gender:</label>
+          <label class="radio-inline col-lg-4 col-xs-4 col-sm-4 mL15">
+            <input ng-required="details.gender != null" type="radio" name="gender" value="male" ng-model="details.gender">Male
+          </label>
+          <label class="radio-inline col-lg-4 col-xs-4 col-sm-4">
+            <input ng-required="details.gender != null" type="radio" name="gender" value="female" ng-model="details.gender">Female
+          </label>
+        </div>
+        <div class="row" ng-if="genderInvalid">
+          <label class="error col-lg-10 col-xs-10 col-sm-10">Please select one option</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <label class="control-label col-lg-3 col-xs-2 col-sm-2" for="age">Age:</label>
+          <div class="col-sm-8 col-xs-7 col-lg-7">
+            <input type="number" ng-model="details.age" value="" ng-required="details.age != null"
+              class="form-control" id="age" placeholder="Enter age : > 18" ng-change="details.age >= 18 || details.age <= 100 ? ageInvalid = false : ageInvalid = true">
+          </div>
+        </div>
+        <div class="row" ng-if="ageInvalid">
+          <label class="error col-lg-10 col-xs-10 col-sm-10">Age should be &gt;=18 and &lt;=100</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="submit" ng-click="$ctrl.ok()">OK</button>
+      <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+  </form>
+</script>
+
+</section>
